@@ -3406,6 +3406,9 @@ h5 {
   width: 100%;
   height: 100%;
 }
+.catalog-menu__btn svg path {
+  transition: all 0.3s ease;
+}
 .catalog-menu__ico {
   display: flex;
   justify-content: center;
@@ -3438,12 +3441,24 @@ h5 {
   color: #ff8c21;
 }
 
+.catalog-menu .catalog-menu__link:hover .catalog-menu__text {
+  color: #ff8c21;
+}
+
+.catalog-menu .catalog-menu__link:hover .catalog-menu__ico svg path {
+  fill: #ff8c21;
+}
+
 .catalog-menu li.active > .catalog-menu__item > .catalog-menu__btn {
   transform: rotate(180deg);
 }
 
 .catalog-menu li.active > .catalog-menu__item > .catalog-menu__btn svg path {
   stroke: #ff8c21;
+}
+
+.catalog-menu__btn:hover svg path {
+  stroke: #ff8c21 !important;
 }
 
 .catalog-section {
@@ -3554,6 +3569,13 @@ h5 {
   padding: 0;
   border: 0;
   outline: 0;
+  cursor: pointer;
+}
+.catalog-item__compare svg path {
+  transition: all 0.3 ease;
+}
+.catalog-item .favorite-added {
+  opacity: 0;
 }
 .catalog-item__favorite {
   display: flex;
@@ -3565,6 +3587,20 @@ h5 {
   padding: 0;
   border: 0;
   outline: 0;
+  cursor: pointer;
+}
+.catalog-item__favorite svg path {
+  transition: all 0.3s ease;
+}
+.catalog-item__favorite.active .favorite-added {
+  opacity: 1;
+}
+.catalog-item__favorite.active .favorite-default {
+  opacity: 0;
+}
+.catalog-item__favorite:hover .favorite-default {
+  stroke: #ff8c21;
+  fill: #ff8c21;
 }
 
 .catalog-item__buy_mobile {
