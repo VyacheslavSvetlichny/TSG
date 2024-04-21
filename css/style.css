@@ -3583,6 +3583,9 @@ h5 {
   .catalog-content_left {
     display: none;
   }
+  .catalog-content {
+    margin-bottom: 100px;
+  }
 }
 @media (max-width: 576px) {
   .catalog-section__list {
