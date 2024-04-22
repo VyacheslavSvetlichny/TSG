@@ -17,7 +17,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
     <title>TSG</title>
   </head>
   <body>
@@ -577,6 +584,109 @@
                         </div>
                         <button>Показать все</button>
                       </div>
+                      <div class="category-filter__price">
+                        <div class="slider-price-inputs">
+                          <div class="slider-price-inputs-item">
+                            <div class="price-inputs-title">От</div>
+                            <input
+                              class="price-inputs-start"
+                              type="number"
+                              name="price-start"
+                              value="0"
+                              data-min-value="0"
+                            />
+                          </div>
+                          <div class="slider-price-inputs-item">
+                            <div class="price-inputs-title">До</div>
+                            <input
+                              class="price-inputs-end"
+                              type="number"
+                              name="price-end"
+                              value="999999"
+                              data-max-value="999999"
+                            />
+                          </div>
+                        </div>
+                        <div id="slider-price"></div>
+                        <script>
+                          jQuery(document).on('ready', function () {
+                            let minValue = Number(
+                              jQuery('input.price-inputs-start').val(),
+                            )
+                            let maxValue = Number(
+                              jQuery('input.price-inputs-end').val(),
+                            )
+
+                            jQuery('#slider-price').slider({
+                              range: true,
+                              min: minValue,
+                              max: maxValue,
+                              step: 1,
+                              values: [minValue, maxValue],
+                              slide: function (event, ui) {
+                                jQuery('input[name="price-start"]').val(
+                                  ui.values[0],
+                                )
+                                jQuery('input[name="price-end"]').val(
+                                  ui.values[1],
+                                )
+                              },
+                            })
+
+                            jQuery('.price-inputs-start').keyup(function () {
+                              let sum = Number($(this).val())
+                              let maxSum = Number(
+                                jQuery('#slider-price').slider('values', 1),
+                              )
+                              if (sum < minValue) sum = minValue
+                              if (sum > maxValue) sum = maxValue
+                              if (sum > maxSum) sum = maxSum
+                              jQuery('#slider-price').slider('values', 0, sum)
+                              $(this).val(sum)
+                            })
+                            jQuery('.price-inputs-end').keyup(function () {
+                              let sum = Number($(this).val())
+                              let minSum = Number(
+                                jQuery('#slider-price').slider('values', 0),
+                              )
+                              if (sum < minValue) sum = minValue
+                              if (sum > maxValue) sum = maxValue
+                              if (sum < minSum) sum = minSum
+                              jQuery('#slider-price').slider('values', 1, sum)
+                              $(this).val(sum)
+                            })
+
+                            $('.siderbar-form-buttons-reset').click(function (
+                              e,
+                            ) {
+                              e.preventDefault()
+
+                              $('#slider-price').each(function () {
+                                var options = $(this).slider('option')
+                                $(this).slider('values', [
+                                  options.min,
+                                  options.max,
+                                ])
+                              })
+
+                              $('input.price-inputs-start').val(
+                                $('input.price-inputs-start').attr(
+                                  'data-min-value',
+                                ),
+                              )
+                              $('input.price-inputs-end').val(
+                                $('input.price-inputs-end').attr(
+                                  'data-max-value',
+                                ),
+                              )
+                            })
+                          })
+                        </script>
+                      </div>
+                      <div class="category-filter__btns">
+                        <button type="submit">Показать</button>
+                        <button type="reset">Сбросить</button>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -779,7 +889,7 @@
         </clipPath>
       </svg>
     </div>
-    <script src="js/jquery-3.7.0.min.js"></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
       integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
