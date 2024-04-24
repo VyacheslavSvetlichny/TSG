@@ -280,3 +280,74 @@ $(document).ready(function () {
     $.fancybox.close()
   })
 })
+
+$(function () {
+  const productSliderNav = new Swiper('.product-img__thumbs', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    speed: 400,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 4.5,
+        spaceBetween: 5,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+    },
+  })
+
+  const productSliderMain = new Swiper('.product-img__slider', {
+    speed: 400,
+    spaceBetween: 15,
+    loop: true,
+    thumbs: {
+      swiper: productSliderNav,
+    },
+    navigation: {
+      nextEl: '.product-next',
+      prevEl: '.product-prev',
+    },
+  })
+})
+
+$(function () {
+  const similarSlider = new Swiper('.product-similar__slider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+      },
+
+      768: {
+        slidesPerView: 2.3,
+        spaceBetween: 10,
+      },
+
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+
+      1400: {
+        slidesPerView: 4,
+      },
+    },
+
+    navigation: {
+      nextEl: '.product-similar__next',
+      prevEl: '.product-similar__prev',
+    },
+  })
+})
+
+$(function () {
+  $('.product-favorite').click(function () {
+    $(this).toggleClass('active')
+  })
+})
