@@ -3916,6 +3916,15 @@ h5 {
 .black .catalog-item__description {
   color: #969696;
 }
+.black .category-filter__item label {
+  color: #969696;
+}
+.black .sorter-price__text {
+  color: #969696;
+}
+.black .items-show__text {
+  color: #969696;
+}
 
 .category-search {
   position: relative;
@@ -3960,6 +3969,12 @@ h5 {
   font-weight: 400;
   line-height: normal;
   background: transparent;
+}
+.slider-price-inputs-item input::-webkit-outer-spin-button,
+.slider-price-inputs-item input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .category-filter__submit {

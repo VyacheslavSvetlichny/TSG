@@ -4419,6 +4419,18 @@ h5 {
   .catalog-item__description {
     color: #969696;
   }
+
+  .category-filter__item label {
+    color: #969696;
+  }
+
+  .sorter-price__text {
+    color: #969696;
+  }
+
+  .items-show__text {
+    color: #969696;
+  }
 }
 .category-search {
   position: relative;
@@ -4463,6 +4475,13 @@ h5 {
     font-weight: 400;
     line-height: normal;
     background: transparent;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
   }
 }
 
