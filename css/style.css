@@ -398,9 +398,11 @@ html.black .page-content .about-page .about-page__content p strong {
 html.black .page-content .header-content_top {
   background: #191919;
 }
+html.black .page-content header {
+  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.05), 0px 4px 25px 0px rgba(255, 255, 255, 0.06);
+}
 html.black .page-content .header-content_bottom {
   background: #2a2a2a;
-  box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.05), 0px 4px 25px 0px rgba(255, 255, 255, 0.06);
 }
 html.black .page-content .catalog-section__title {
   color: #fff;
@@ -2626,6 +2628,25 @@ html.black .equipment-next svg path:last-child {
   z-index: -2;
 }
 
+.feedback-backgorund_black {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1920px;
+  height: 100%;
+  z-index: -2;
+}
+
+.black .feedback-backgorund_black {
+  display: block;
+}
+
+.black .feedback-backgorund {
+  display: none;
+}
+
 .feedback-img {
   position: absolute;
   bottom: -55px;
@@ -2759,7 +2780,7 @@ html.black .equipment-next svg path:last-child {
   }
   .feedback-content__left {
     flex: 0 0 100%;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .feedback-heading {
     font-size: 25px;
@@ -2821,11 +2842,16 @@ html.black .equipment-next svg path:last-child {
   .black .feedback-backgorund_mobile-black {
     display: block;
   }
+  .black .feedback-backgorund_black {
+    display: none;
+  }
   .feedback-heading {
-    max-width: 226px;
+    max-width: 100%;
+    text-align: center;
   }
   .feedback-description {
-    max-width: 142px;
+    max-width: 100%;
+    text-align: center;
   }
   .feedback-backgorund_mobile-white {
     display: block;
@@ -2969,6 +2995,10 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  transition: all 0.3s ease;
+}
+.footer-menu ul li a:hover {
+  color: #ff8c21;
 }
 
 @media (max-width: 1200px) {
@@ -3291,15 +3321,17 @@ h5 {
 }
 
 .page-content {
-  background: #f8f8f8;
+  background: #ffffff;
+}
+.page-content header {
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
 }
 .page-content .header-content_top {
-  background: unset;
+  background: #f8f8f8;
 }
 .page-content .header-content_bottom {
   background: #fff;
   padding: 32px 0 24px;
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
 }
 .page-content .feedback {
   background: unset;
