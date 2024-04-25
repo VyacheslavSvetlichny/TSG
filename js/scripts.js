@@ -350,4 +350,8 @@ $(function () {
   $('.product-favorite').click(function () {
     $(this).toggleClass('active')
   })
+
+  $('.equipment-slide__favorite').click(function () {
+    $(this).toggleClass('active')
+  })
 })
