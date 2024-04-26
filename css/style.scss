@@ -5723,17 +5723,17 @@ h5 {
 
   .product-label__instock {
     font-size: 13px;
-    padding: 3px 5px 8px;
+    padding: 3px 8px 5px;
   }
 
   .product-label__out {
     font-size: 13px;
-    padding: 3px 5px 8px;
+    padding: 3px 8px 5px;
   }
 
   .product-label__order {
     font-size: 13px;
-    padding: 3px 5px 8px;
+    padding: 3px 8px 5px;
   }
 
   .product-next,
@@ -5776,6 +5776,9 @@ h5 {
   .product-buy {
     display: block;
     text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    background: url(../images/svg/product-btn_mobile.svg) no-repeat;
   }
 
   .product-about__title {
