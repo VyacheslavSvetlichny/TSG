@@ -287,15 +287,6 @@ $(function () {
     spaceBetween: 10,
     speed: 400,
     loop: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 4.5,
-        spaceBetween: 5,
-      },
-      993: {
-        slidesPerView: 3,
-      },
-    },
   })
 
   const productSliderMain = new Swiper('.product-img__slider', {
