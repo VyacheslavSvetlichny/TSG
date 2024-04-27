@@ -346,3 +346,66 @@ $(function () {
     $(this).toggleClass('active')
   })
 })
+
+$(function () {
+  $('.table tbody tr td:first-child').wrapInner(
+    "<div class='table-content'></div>",
+  )
+  $('.table thead tr th:first-child').wrapInner(
+    "<div class='table-content'></div>",
+  )
+
+  $('.table thead tr th:first-child').css('min-height', $('thead tr').height())
+
+  $('.table-content').each(function () {
+    let cellHeight = $(this).height()
+    $(this).parent().siblings().height(cellHeight)
+  })
+
+  $('.table tbody tr').each(function () {
+    let height = $(this).find('td:not(:first-child)').height()
+    $(this).find('td:first-child').css('min-height', height)
+  })
+
+  $('.table tbody tr').each(function () {
+    let row = $(this).offset()
+    console.log(row)
+    let table = $('.table-inner').offset()
+    let top = row.top - table.top
+
+    $(this).children('td:first-child').css('top', top)
+  })
+})
+
+$(function () {
+  const customSlider = new Swiper('.images-list', {
+    slidesPerView: 4,
+    spaceBetween: 18,
+    loop: true,
+
+    navigation: {
+      nextEl: '.images-next',
+      prevEl: '.images-prev',
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+      },
+
+      576: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+
+      992: {
+        slidesPerView: 3,
+      },
+
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  })
+})
