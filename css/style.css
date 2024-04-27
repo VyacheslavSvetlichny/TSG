@@ -4610,18 +4610,38 @@ h5 {
 .product-img {
   position: relative;
   max-width: 800px;
-  padding: 30px 20px;
+  height: 600px;
+  z-index: 1;
 }
 .product-img__slider {
-  margin-bottom: 30px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 .product-img__thumbs {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 200px;
 }
 
+@media (min-width: 1920px) {
+  .product-slide {
+    -webkit-clip-path: url(#product-img__background);
+            clip-path: url(#product-img__background);
+  }
+}
+@media (max-width: 992px) {
+  .product-slide {
+    -webkit-clip-path: url(#product-img__background_mobile);
+            clip-path: url(#product-img__background_mobile);
+  }
+}
 .product-slide {
   position: relative;
-  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .product-slide img {
   position: absolute;
@@ -4629,8 +4649,8 @@ h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product-thumb {
@@ -4645,16 +4665,22 @@ h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.2;
   transition: all 0.3s ease;
+}
+.product-thumb:hover img {
+  opacity: 0.5;
 }
 
 .swiper-slide-thumb-active {
   border: 1px solid #ff8c21;
 }
 .swiper-slide-thumb-active img {
+  opacity: 1;
+}
+.swiper-slide-thumb-active:hover img {
   opacity: 1;
 }
 
@@ -4956,9 +4982,6 @@ h5 {
   margin-bottom: 170px;
 }
 
-.black .product-img {
-  background: url(../images/svg/product-img__background.svg) no-repeat;
-}
 .black .product-article {
   color: #969696;
 }
@@ -5055,9 +5078,7 @@ h5 {
   }
   .product-img {
     max-width: 500px;
-  }
-  .product-slide {
-    height: 300px;
+    height: 400px;
   }
 }
 @media (max-width: 992px) {
@@ -5090,11 +5111,15 @@ h5 {
   }
   .product-img__slider {
     margin-bottom: 10px;
-    padding: 12px 0 7px;
-    background: url(../images/svg/product-img__background.svg) no-repeat;
-  }
-  .product-slide {
     height: 240px;
+  }
+  .product-img {
+    height: 100%;
+  }
+  .product-img__thumbs {
+    position: unset;
+    margin: 0 auto;
+    transform: unset;
   }
   .product-thumb {
     background: #fff;
