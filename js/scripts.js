@@ -380,7 +380,7 @@ $(function () {
 $(function () {
   const customSlider = new Swiper('.images-list', {
     slidesPerView: 4,
-    spaceBetween: 18,
+    spaceBetween: 30,
     loop: true,
 
     navigation: {
@@ -401,6 +401,7 @@ $(function () {
 
       992: {
         slidesPerView: 3,
+        spaceBetween: 10,
       },
 
       1200: {

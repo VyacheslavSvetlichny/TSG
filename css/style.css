@@ -2491,8 +2491,8 @@ html.black .equipment-next svg path:last-child {
 
 .video-background {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1px;
+  right: 1px;
   width: 99%;
   height: 99%;
   z-index: -2;
@@ -5070,7 +5070,7 @@ h5 {
   .black .product .product-heading__mobile {
     color: #fff;
   }
-  h1 {
+  .product h1 {
     display: none;
   }
   .product-content_left {
@@ -5226,7 +5226,7 @@ h5 {
   }
 }
 .custom {
-  padding-bottom: 70px;
+  margin-bottom: 400px;
 }
 .custom h1 {
   color: #222;
@@ -5288,6 +5288,12 @@ h5 {
   width: 6px;
   border-radius: 10px;
   background: #ff8c21;
+}
+
+.black .quote {
+  background: #2a2a2a;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+  color: #969696;
 }
 
 .text {
@@ -5411,24 +5417,36 @@ h5 {
 
 .images-prev {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: -80px;
-  transform: translateY(-55%);
+  transform: translateY(-50%);
   width: 60px;
   height: 60px;
   z-index: 2;
   cursor: pointer;
 }
+.images-prev svg path {
+  transition: all 0.3s ease;
+}
+.images-prev:hover svg path {
+  stroke: #ff8c21 !important;
+}
 
 .images-next {
   position: absolute;
-  top: 55%;
+  top: 50%;
   right: -80px;
-  transform: translateY(-55%);
+  transform: translateY(-50%);
   width: 60px;
   height: 60px;
   z-index: 2;
   cursor: pointer;
+}
+.images-next svg path {
+  transition: all 0.3s ease;
+}
+.images-next:hover svg path {
+  stroke: #ff8c21 !important;
 }
 
 .custom .video-front {
@@ -5436,9 +5454,43 @@ h5 {
           clip-path: url(#product-video);
 }
 
+.black .custom p {
+  color: #969696;
+}
+.black .table thead th:first-child {
+  background: #2a2a2a;
+  color: #fff;
+}
+.black .table thead tr {
+  background: #2a2a2a;
+}
+.black .table thead th {
+  color: #fff;
+}
+.black .table tbody tr:nth-of-type(odd) td {
+  background: #191919;
+  color: #969696;
+}
+.black .table tbody tr:nth-of-type(even) td {
+  background: #2a2a2a;
+  color: #969696;
+}
+.black .images-prev svg path:first-child,
+.black .images-next svg path:first-child {
+  stroke: #373737;
+}
+.black .images-prev svg path:last-child,
+.black .images-next svg path:last-child {
+  stroke: #fff;
+}
+
 @media (max-width: 1200px) {
   .custom {
-    padding-bottom: 50px;
+    margin-bottom: 100px;
+  }
+  .custom .video-front {
+    overflow: hidden;
+    border-radius: 20px;
   }
   .custom-heading {
     font-size: 48px;
@@ -5457,6 +5509,9 @@ h5 {
   .images {
     margin-bottom: 70px;
   }
+  .images-item {
+    height: 300px;
+  }
 }
 @media (max-width: 992px) {
   .custom-heading {
@@ -5469,19 +5524,38 @@ h5 {
     text-transform: uppercase;
     margin-bottom: 16px;
   }
+  .video-play {
+    width: 70px;
+    height: 70px;
+  }
+  .video-play svg {
+    width: 70px;
+    height: 70px;
+  }
+  .custom .video-front {
+    overflow: unset;
+    border-radius: 0;
+  }
   .custom-video {
     max-width: 320px;
     margin: 0 auto;
   }
   .quote {
-    padding: 15px 15px 15px 20px;
-    font-size: 15px;
+    padding: 20px 20px 20px 36px;
+    font-size: 14px;
+    margin-bottom: 20px;
   }
   .table thead th:first-child {
     border-right: 1px solid #fff;
   }
   .table tbody tr:nth-of-type(even) td:first-child {
     border-right: 1px solid #fff;
+  }
+  .black .table tbody tr:nth-of-type(even) td:first-child {
+    border-right: 1px solid #191919;
+  }
+  .black .table thead th:first-child {
+    border-right: 1px solid #191919;
   }
   .table tbody td {
     font-size: 13px;
@@ -5502,7 +5576,7 @@ h5 {
     text-align: start;
   }
   .table .table-title {
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
   .text-heading {
@@ -5513,10 +5587,10 @@ h5 {
     margin-bottom: 10px;
   }
   .text-content p {
-    font-size: 13px;
+    font-size: 14px;
   }
   .text {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .images-heading {
     font-size: 19px;
@@ -5525,28 +5599,39 @@ h5 {
   .images-item {
     height: 265px;
   }
-  .video-play {
-    width: 115.52px;
-    height: 115.52px;
-  }
-  .video-play svg {
-    width: 115.52px;
-    height: 115.52px;
-  }
   .images {
-    margin-bottom: 90px;
-    margin-right: -15px;
+    margin-bottom: 50px;
   }
   .custom .video-front {
     -webkit-clip-path: url(#product-video_mobile);
             clip-path: url(#product-video_mobile);
   }
+  .images-next,
+  .images-prev {
+    display: none;
+  }
+  .custom h1 {
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    margin-bottom: 10px;
+  }
+  .custom h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+  .custom p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 768px) {
-  .table {
+  .images-item {
+    height: 224px;
+  }
+  .table-outer {
     position: relative;
   }
-  .table::after {
+  .table-outer::after {
     position: absolute;
     content: "";
     top: 55%;
@@ -5557,7 +5642,7 @@ h5 {
     background: url(../images/svg/custom-table__arrow.svg) no-repeat;
     z-index: 3;
   }
-  .table::before {
+  .table-outer::before {
     position: absolute;
     content: "";
     top: 0;
@@ -5566,6 +5651,9 @@ h5 {
     height: 100%;
     background: linear-gradient(270deg, #f9f9fa 0%, rgba(249, 249, 250, 0) 100%);
     z-index: 2;
+  }
+  .black .table-outer::before {
+    background: linear-gradient(270deg, #2a2a2a 0%, rgba(42, 42, 42, 0) 100%);
   }
   .table-outer {
     margin: 0 -15px;
@@ -5578,5 +5666,10 @@ h5 {
   }
   .table .table-inner {
     border-radius: 0;
+  }
+}
+@media (max-width: 576px) {
+  .images {
+    margin-right: -15px;
   }
 }/*# sourceMappingURL=style.css.map */
