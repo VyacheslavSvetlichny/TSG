@@ -18,6 +18,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <title>TSG</title>
   </head>
   <body>
@@ -492,476 +496,372 @@
             <a href="/">Главная</a>
           </div>
         </section>
-        <section class="blog-page">
+        <section class="contacts-page">
           <div class="container">
-            <h1>Блог</h1>
-            <div class="blog-page__list">
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
+            <h1>Контакты</h1>
+            <div class="contacts-map__list">
+              <div class="contacts-map__item">
+                <div class="contacts-map__content">
+                  <div class="contacts-map__title">Москва</div>
+                  <div class="contacts-map__address">
+                    ул. Электрозаводская, 2, к1, офис 100
+                  </div>
+                  <div class="contacts-info">
+                    <div class="contacts-info_left">
+                      <a href="#" class="contacts-info__item">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M28.4226 25.9795C28.6557 25.9723 28.8824 26.0559 29.055 26.2128L32.705 29.5323C32.8779 29.6896 32.9827 29.908 32.9971 30.1413C33.0116 30.3745 32.9345 30.6043 32.7823 30.7816L31.1118 32.7315C30.9567 32.8874 30.7494 32.9805 30.5298 32.9928C30.5001 32.9946 30.3888 33 30.2073 33C28.9661 33 24.4593 32.7368 20.8613 29.1398C16.7371 25.0138 16.994 19.695 17.0074 19.4705C17.0199 19.2509 17.1126 19.0434 17.2679 18.8876L19.2169 17.2162C19.3943 17.0641 19.6241 16.9872 19.8574 17.0018C20.0906 17.0163 20.309 17.1213 20.4662 17.2943L23.7848 20.9434C23.9418 21.1159 24.0256 21.3427 24.0184 21.5759C24.0112 21.8091 23.9136 22.0303 23.7461 22.1927L21.5376 24.3429C21.6337 24.8566 21.958 25.8993 23.0285 26.9708C24.0991 28.0387 25.1392 28.3629 25.6565 28.4617L27.8057 26.2514C27.9683 26.0842 28.1895 25.9867 28.4226 25.9795Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">Телефон</div>
+                          <div class="contacts-info__value">
+                            +7 923 <span>115 33 33</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#" class="contacts-info__item email">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              d="M32.3 18H18.7C18.2491 18 17.8167 18.1844 17.4979 18.5126C17.1791 18.8408 17 19.2859 17 19.75V30.25C17 30.7141 17.1791 31.1592 17.4979 31.4874C17.8167 31.8156 18.2491 32 18.7 32H32.3C32.7509 32 33.1833 31.8156 33.5021 31.4874C33.8209 31.1592 34 30.7141 34 30.25V19.75C34 19.2859 33.8209 18.8408 33.5021 18.5126C33.1833 18.1844 32.7509 18 32.3 18ZM32.3 22.1125L25.5 26.7798L18.7 22.1125V20.0099L25.5 24.6762L32.3 20.0099V22.1125Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">Почта</div>
+                          <div class="contacts-info__value">info@t-sib.ru</div>
+                        </div>
+                      </a>
+                      <a href="#" class="contacts-info__item email">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              d="M32.3 18H18.7C18.2491 18 17.8167 18.1844 17.4979 18.5126C17.1791 18.8408 17 19.2859 17 19.75V30.25C17 30.7141 17.1791 31.1592 17.4979 31.4874C17.8167 31.8156 18.2491 32 18.7 32H32.3C32.7509 32 33.1833 31.8156 33.5021 31.4874C33.8209 31.1592 34 30.7141 34 30.25V19.75C34 19.2859 33.8209 18.8408 33.5021 18.5126C33.1833 18.1844 32.7509 18 32.3 18ZM32.3 22.1125L25.5 26.7798L18.7 22.1125V20.0099L25.5 24.6762L32.3 20.0099V22.1125Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">
+                            Почта сервисной службы
+                          </div>
+                          <div class="contacts-info__value">
+                            service@t-sib.ru
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="contacts-info_right">
+                      <div class="contacts-info__item">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M15 25C15 19.486 19.486 15 25 15C30.514 15 35 19.486 35 25C35 30.514 30.514 35 25 35C19.486 35 15 30.514 15 25ZM17 25C17 29.411 20.589 33 25 33C29.411 33 33 29.411 33 25C33 20.589 29.411 17 25 17C20.589 17 17 20.589 17 25ZM24 25.414V20H26V24.586L28.707 27.293L27.293 28.707L24 25.414Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">
+                            График работы офиса:
+                          </div>
+                          <div class="contacts-info__value">
+                            Пн-Пт <span>09:00-18:00</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contacts-info__item">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M15 25C15 19.486 19.486 15 25 15C30.514 15 35 19.486 35 25C35 30.514 30.514 35 25 35C19.486 35 15 30.514 15 25ZM17 25C17 29.411 20.589 33 25 33C29.411 33 33 29.411 33 25C33 20.589 29.411 17 25 17C20.589 17 17 20.589 17 25ZM24 25.414V20H26V24.586L28.707 27.293L27.293 28.707L24 25.414Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">
+                            График работы склада:
+                          </div>
+                          <div class="contacts-info__value">
+                            Пн-Пт <span>09:00-18:00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
+                <div id="map1" class="map-container"></div>
+              </div>
+              <div class="contacts-map__item">
+                <div class="contacts-map__content">
+                  <div class="contacts-map__title">Новосибирск</div>
+                  <div class="contacts-map__address">
+                    ул. Электрозаводская, 2, к1, офис 100
+                  </div>
+                  <div class="contacts-info">
+                    <div class="contacts-info_left">
+                      <a href="#" class="contacts-info__item">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M28.4226 25.9795C28.6557 25.9723 28.8824 26.0559 29.055 26.2128L32.705 29.5323C32.8779 29.6896 32.9827 29.908 32.9971 30.1413C33.0116 30.3745 32.9345 30.6043 32.7823 30.7816L31.1118 32.7315C30.9567 32.8874 30.7494 32.9805 30.5298 32.9928C30.5001 32.9946 30.3888 33 30.2073 33C28.9661 33 24.4593 32.7368 20.8613 29.1398C16.7371 25.0138 16.994 19.695 17.0074 19.4705C17.0199 19.2509 17.1126 19.0434 17.2679 18.8876L19.2169 17.2162C19.3943 17.0641 19.6241 16.9872 19.8574 17.0018C20.0906 17.0163 20.309 17.1213 20.4662 17.2943L23.7848 20.9434C23.9418 21.1159 24.0256 21.3427 24.0184 21.5759C24.0112 21.8091 23.9136 22.0303 23.7461 22.1927L21.5376 24.3429C21.6337 24.8566 21.958 25.8993 23.0285 26.9708C24.0991 28.0387 25.1392 28.3629 25.6565 28.4617L27.8057 26.2514C27.9683 26.0842 28.1895 25.9867 28.4226 25.9795Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">Телефон</div>
+                          <div class="contacts-info__value">
+                            +7 923 <span>115 33 33</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="#" class="contacts-info__item email">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              d="M32.3 18H18.7C18.2491 18 17.8167 18.1844 17.4979 18.5126C17.1791 18.8408 17 19.2859 17 19.75V30.25C17 30.7141 17.1791 31.1592 17.4979 31.4874C17.8167 31.8156 18.2491 32 18.7 32H32.3C32.7509 32 33.1833 31.8156 33.5021 31.4874C33.8209 31.1592 34 30.7141 34 30.25V19.75C34 19.2859 33.8209 18.8408 33.5021 18.5126C33.1833 18.1844 32.7509 18 32.3 18ZM32.3 22.1125L25.5 26.7798L18.7 22.1125V20.0099L25.5 24.6762L32.3 20.0099V22.1125Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">Почта</div>
+                          <div class="contacts-info__value">info@t-sib.ru</div>
+                        </div>
+                      </a>
+                      <a href="#" class="contacts-info__item email">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              d="M32.3 18H18.7C18.2491 18 17.8167 18.1844 17.4979 18.5126C17.1791 18.8408 17 19.2859 17 19.75V30.25C17 30.7141 17.1791 31.1592 17.4979 31.4874C17.8167 31.8156 18.2491 32 18.7 32H32.3C32.7509 32 33.1833 31.8156 33.5021 31.4874C33.8209 31.1592 34 30.7141 34 30.25V19.75C34 19.2859 33.8209 18.8408 33.5021 18.5126C33.1833 18.1844 32.7509 18 32.3 18ZM32.3 22.1125L25.5 26.7798L18.7 22.1125V20.0099L25.5 24.6762L32.3 20.0099V22.1125Z"
+                              fill="#222222"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">
+                            Почта сервисной службы
+                          </div>
+                          <div class="contacts-info__value">
+                            service@t-sib.ru
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="contacts-info_right">
+                      <div class="contacts-info__item">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M15 25C15 19.486 19.486 15 25 15C30.514 15 35 19.486 35 25C35 30.514 30.514 35 25 35C19.486 35 15 30.514 15 25ZM17 25C17 29.411 20.589 33 25 33C29.411 33 33 29.411 33 25C33 20.589 29.411 17 25 17C20.589 17 17 20.589 17 25ZM24 25.414V20H26V24.586L28.707 27.293L27.293 28.707L24 25.414Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">
+                            График работы офиса:
+                          </div>
+                          <div class="contacts-info__value">
+                            Пн-Пт <span>09:00-18:00</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="contacts-info__item">
+                        <div class="contacts-info__ico">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="50"
+                            height="50"
+                            viewBox="0 0 50 50"
+                            fill="none"
+                          >
+                            <circle
+                              cx="25"
+                              cy="25"
+                              r="24.5"
+                              fill="white"
+                              stroke="#D4D4D4"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M15 25C15 19.486 19.486 15 25 15C30.514 15 35 19.486 35 25C35 30.514 30.514 35 25 35C19.486 35 15 30.514 15 25ZM17 25C17 29.411 20.589 33 25 33C29.411 33 33 29.411 33 25C33 20.589 29.411 17 25 17C20.589 17 17 20.589 17 25ZM24 25.414V20H26V24.586L28.707 27.293L27.293 28.707L24 25.414Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                        <div class="contacts-info__text">
+                          <div class="contacts-info__title">
+                            График работы склада:
+                          </div>
+                          <div class="contacts-info__value">
+                            Пн-Пт <span>09:00-18:00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
-              <a href="#" class="blog-item">
-                <div class="blog-data"><span>21</span> дек</div>
-                <div class="blog-title">
-                  Большое поступление фасовочно-упаковочных машин KAIZEN
-                  TECHNOLOGY (Турция)
-                </div>
-                <div class="blog-description">
-                  Партнерами фирмы “Техно-Сиб” являются ведущие европейские
-                  заводы производители оборудования.
-                </div>
-                <div class="blog-btn">Читать подробнее</div>
-                <img
-                  src="images/blog-item__img.png"
-                  alt=""
-                  class="blog-item__img"
-                />
-                <img
-                  src="images/blog-item__filter.png"
-                  alt=""
-                  class="blog-item__filter"
-                />
-                <img
-                  src="images/blog-item__filter_black.png"
-                  alt=""
-                  class="blog-item__filter_black"
-                />
-              </a>
+                <div id="map2" class="map-container"></div>
+              </div>
             </div>
-            <div class="category-pagination">
-              <a href="#" class="category-pagination__btn active"> 1 </a>
-              <a href="#" class="category-pagination__btn"> 2 </a>
-              <a href="#" class="category-pagination__btn"> 3 </a>
-              <a href="#" class="category-pagination__btn"> 4 </a>
-              <a href="#" class="category-pagination__btn"> 5 </a>
+            <div class="contacts-bank">
+              <div class="contacts-bank_left">
+                <div class="contacts-bank__title">Реквизиты</div>
+                <div class="contacts-bank__description">
+                  <p>
+                    Полное наименование организации - Общество с ограниченной
+                    ответственностью «Техно-Сиб Групп»
+                  </p>
+                  <p>ИНН – 5406804844</p>
+                  <p>ОГРН – 1205400012146</p>
+                </div>
+              </div>
+              <div class="contacts-bank_right">
+                <div class="contacts-bank__title">Банковские реквизиты</div>
+                <div class="contacts-bank__description">
+                  <p>Р/СЧ – 40702810523000011974</p>
+                  <p>ФИЛИАЛ "НОВОСИБИРСКИЙ" АО "АЛЬФА-БАНК"</p>
+                  <p>БИК – 045004774</p>
+                  <p>Кор/счет – 30101810600000000774</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1211,36 +1111,6 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <clipPath id="blog-item__black">
-          <path
-            d="M0 34.1421C0 31.49 1.05357 28.9464 2.92893 27.0711L27.0711 2.92893C28.9464 1.05357 31.49 0 34.1421 0H580C585.523 0 590 4.47715 590 10V430.858C590 433.51 588.946 436.054 587.071 437.929L562.929 462.071C561.054 463.946 558.51 465 555.858 465H10C4.47715 465 0 460.523 0 455V34.1421Z"
-            fill="#D9D9D9"
-          />
-        </clipPath>
-      </svg>
-      <svg
-        width="0"
-        height="0"
-        preserveaspectratio="none"
-        viewBox="0 0 1200 760"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <clipPath id="blog-item__white">
-          <path
-            d="M0 5.99999C0 2.68629 2.68629 0 6 0H272.515C274.106 0 275.632 0.632141 276.757 1.75736L283.243 8.24264C284.368 9.36786 285 10.894 285 12.4853V205H20H0V5.99999Z"
-            fill="#fff"
-          />
-        </clipPath>
-      </svg>
-      <svg
-        width="0"
-        height="0"
-        preserveaspectratio="none"
-        viewBox="0 0 1200 760"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
         <clipPath id="blog-item__mask">
           <path
             d="M0 64.1422C0 61.49 1.05357 58.9464 2.92893 57.0711L57.0711 2.92893C58.9464 1.05357 61.49 0 64.1421 0H1190C1195.52 0 1200 4.47715 1200 10V725.858C1200 728.51 1198.95 731.054 1197.07 732.929L1172.93 757.071C1171.05 758.946 1168.51 760 1165.86 760H10C4.47715 760 0 755.523 0 750V64.1422Z"
@@ -1301,5 +1171,6 @@
     <script src="js/inputmask.min.js"></script>
     <script src="js/inputmask.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/yamap.js"></script>
   </body>
 </html>
