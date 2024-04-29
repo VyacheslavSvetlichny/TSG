@@ -6277,6 +6277,37 @@ html.black .blog-page .blog-item .blog-item__filter_black {
 .black .contacts-map__item {
   background: url(../images/svg/contacts-item__background_black.svg) no-repeat;
 }
+.black .contacts-map__title {
+  color: #fff;
+}
+.black .contacts-map__address {
+  color: #969696;
+}
+.black .contacts-info__title {
+  color: #fff;
+}
+.black .contacts-info__value {
+  color: #8c8c8c;
+}
+.black .contacts-info__value span {
+  color: #fff;
+}
+.black .email .contacts-info__value {
+  color: #ff8c21;
+}
+.black .contacts-info__ico circle {
+  stroke: #373737;
+  fill: transparent;
+}
+.black .contacts-info__ico path {
+  fill: white;
+}
+.black .contacts-bank__title {
+  color: #fff;
+}
+.black .contacts-bank__description p {
+  color: #969696;
+}
 
 @media (max-width: 1200px) {
   .contacts-map__list {
@@ -6349,4 +6380,90 @@ html.black .blog-page .blog-item .blog-item__filter_black {
     flex: 0 0 calc(100% - 30px);
     margin-bottom: 20px;
   }
+}
+.delivery-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-content_left {
+  flex: 0 0 790px;
+}
+
+.delivery-info {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 20px 26px 22px 36px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05), 0px 4px 25px 0px rgba(0, 0, 0, 0.06);
+}
+.delivery-info::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: 6px;
+  border-radius: 10px;
+  background: #ff8c21;
+}
+
+.delivery-about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.delivery-about__item:first-child {
+  flex: 0 0 calc(50% - 30px);
+  margin: 0 15px 40px;
+  padding: 25px 30px;
+}
+
+.delivery-about__item:nth-of-type(2) {
+  flex: 0 0 calc(50% - 30px);
+  margin: 0 15px 40px;
+  padding: 25px 30px;
+}
+
+.delivery-about__item:last-child {
+  flex: 0 0 calc(100% - 30px);
+}
+
+.delivery-about__title {
+  color: #222;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.delivery-about__body ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.delivery-about__body ul li {
+  position: relative;
+  padding-left: 20px;
+  color: #787878;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.delivery-about__body ul li span {
+  color: #222;
+  font-weight: 700;
+}
+.delivery-about__body ul li::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #ff8c21;
+  border-radius: 100%;
+}
+
+.delivery-content_right {
+  flex: 0 0 380px;
 }/*# sourceMappingURL=style.css.map */
