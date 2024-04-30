@@ -410,3 +410,37 @@ $(function () {
     },
   })
 })
+
+$(function () {
+  const lifeSlider = new Swiper('.career-life__slider', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+
+    navigation: {
+      nextEl: '.career-life__next',
+      prevEl: '.career-life__prev',
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+      },
+
+      576: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  })
+})
