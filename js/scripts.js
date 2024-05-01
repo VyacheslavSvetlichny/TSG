@@ -42,7 +42,7 @@ $(function () {
   const equipmentSlider = new Swiper('.equipment-slider', {
     slidesPerView: 4,
     spaceBetween: 20,
-    loop: true,
+    loop: false,
 
     breakpoints: {
       320: {
@@ -443,4 +443,91 @@ $(function () {
       },
     },
   })
+})
+
+$(function () {
+  const whatchedSlider = new Swiper('.whatched-slider', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+
+    navigation: {
+      nextEl: '.career-life__next',
+      prevEl: '.career-life__prev',
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,
+      },
+
+      576: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  })
+})
+
+$(document).ready(function () {
+  $('#career-form__file').change(function () {
+    const fileName = $(this).prop('files')[0].name
+    const truncatedFileName =
+      fileName.length > 10 ? fileName.substring(0, 10) + '...' : fileName
+    $('label[for="career-form__file"]').text(truncatedFileName)
+  })
+})
+
+$(document).ready(function () {
+  // Plus button click event
+  $('.cart-item__plus').on('click', function () {
+    var input = $(this).siblings('.cart-item__counter')
+    var currentValue = parseInt(input.val())
+    input.val(currentValue + 1)
+    calculateTotal()
+  })
+
+  // Minus button click event
+  $('.cart-item__minus').on('click', function () {
+    var input = $(this).siblings('.cart-item__counter')
+    var currentValue = parseInt(input.val())
+    if (currentValue > 0) {
+      input.val(currentValue - 1)
+      calculateTotal()
+    }
+  })
+
+  $('.cart-item__counter').on('change', function () {
+    var input = $(this)
+    var currentValue = parseInt(input.val())
+    if (currentValue > 0) {
+      calculateTotal()
+    }
+  })
+
+  // Function to calculate total quantity and price
+  function calculateTotal() {
+    var totalQuantity = 0
+    var totalPrice = 0
+    $('.cart-item').each(function () {
+      var price = parseInt($(this).find('.cart-item__price').text())
+      var quantity = parseInt($(this).find('.cart-item__counter').val())
+      totalQuantity += quantity
+      totalPrice += price * quantity
+    })
+    $('.price-total__number').text(totalPrice)
+    $('.order-detail__price').text(totalPrice)
+    $('.order-detail__quantity').text(totalQuantity)
+    $('.items-total__value').text(totalQuantity)
+  }
 })
