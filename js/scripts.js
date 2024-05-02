@@ -452,8 +452,8 @@ $(function () {
     loop: true,
 
     navigation: {
-      nextEl: '.career-life__next',
-      prevEl: '.career-life__prev',
+      nextEl: '.whatched-next',
+      prevEl: '.whatched-prev',
     },
 
     breakpoints: {
@@ -472,7 +472,7 @@ $(function () {
         spaceBetween: 10,
       },
 
-      1200: {
+      1201: {
         slidesPerView: 4,
       },
     },
@@ -530,4 +530,11 @@ $(document).ready(function () {
     $('.order-detail__quantity').text(totalQuantity)
     $('.items-total__value').text(totalQuantity)
   }
+})
+
+$(function () {
+  $('.answers-item').click(function () {
+    $(this).children('.answers-item__body').slideToggle()
+    $(this).toggleClass('active')
+  })
 })
