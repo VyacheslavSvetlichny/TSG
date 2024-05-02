@@ -7407,7 +7407,6 @@ html.black .blog-page .blog-item .blog-item__filter_black {
 }
 .career-form__item .select__item:hover {
   background-color: #d2d2d2;
-  color: #ff8c21;
 }
 .career-form__item .select__head::after {
   width: 24px;
