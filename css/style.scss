@@ -2009,9 +2009,8 @@ header {
 
 .equipment-prev {
   position: absolute;
-  top: 50%;
+  top: 280px;
   left: -90px;
-  transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
 }
@@ -2034,9 +2033,8 @@ html.black .equipment-next svg path:last-child {
 
 .equipment-next {
   position: absolute;
-  top: 50%;
+  top: 280px;
   right: -90px;
-  transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
 }
@@ -5540,7 +5538,7 @@ h5 {
 }
 
 .product-similar__slider {
-  padding: 30px 0;
+  padding: 0 0 30px;
 }
 
 .product-similar__prev {
@@ -5736,6 +5734,10 @@ h5 {
     .video-front {
       clip-path: url(#product-video_mobile);
     }
+  }
+
+  .product-video {
+    margin-bottom: 30px;
   }
 
   .product-video .video-background {
@@ -8489,7 +8491,8 @@ html.black .blog-page .blog-item .blog-item__filter_black {
       line-height: normal;
 
       &:hover {
-        background-color: #c2c2c2;
+        background-color: #d2d2d2;
+        color: #ff8c21;
       }
     }
 
@@ -9128,6 +9131,12 @@ html.black .blog-page .blog-item .blog-item__filter_black {
     border: 0;
     outline: 0;
     background: url(../images/svg/leasing-about__btn.svg) no-repeat;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 .leasing-list {
@@ -9240,6 +9249,7 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   }
   .leasing-about__title {
     font-size: 18px;
+    font-weight: 700;
     margin-bottom: 10px;
   }
 

@@ -1794,9 +1794,8 @@ header {
 
 .equipment-prev {
   position: absolute;
-  top: 50%;
+  top: 280px;
   left: -90px;
-  transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
 }
@@ -1819,9 +1818,8 @@ html.black .equipment-next svg path:last-child {
 
 .equipment-next {
   position: absolute;
-  top: 50%;
+  top: 280px;
   right: -90px;
-  transform: translateY(-50%);
   z-index: 2;
   cursor: pointer;
 }
@@ -4924,7 +4922,7 @@ h5 {
 }
 
 .product-similar__slider {
-  padding: 30px 0;
+  padding: 0 0 30px;
 }
 
 .product-similar__prev {
@@ -5089,6 +5087,9 @@ h5 {
   .product-video .video-front {
     -webkit-clip-path: url(#product-video_mobile);
             clip-path: url(#product-video_mobile);
+  }
+  .product-video {
+    margin-bottom: 30px;
   }
   .product-video .video-background {
     top: 0;
@@ -7405,7 +7406,8 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   line-height: normal;
 }
 .career-form__item .select__item:hover {
-  background-color: #c2c2c2;
+  background-color: #d2d2d2;
+  color: #ff8c21;
 }
 .career-form__item .select__head::after {
   width: 24px;
@@ -7907,6 +7909,11 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   border: 0;
   outline: 0;
   background: url(../images/svg/leasing-about__btn.svg) no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.leasing-about__btn:hover {
+  transform: translateY(-5px);
 }
 
 .leasing-list {
@@ -8001,6 +8008,7 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   }
   .leasing-about__title {
     font-size: 18px;
+    font-weight: 700;
     margin-bottom: 10px;
   }
   .leasing-about__description {
