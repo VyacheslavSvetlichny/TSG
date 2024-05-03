@@ -657,6 +657,31 @@ header {
   transition: all 0.3s ease;
 }
 
+.menu-catalog__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu-catalog__ico {
+  flex: 0 0 30px;
+  margin-right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.menu-catalog__text {
+  flex: 1 1 auto;
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .header-menu > ul ul {
   position: absolute;
   top: 100%;
@@ -665,25 +690,26 @@ header {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: 4px 15px 25px rgba(0, 0, 0, 0.13);
 
-  & > li {
-    a {
-      display: block;
-      color: #8c8c8c;
-      padding: 15px 30px;
-      font-family: $MainFamily;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      background: #fff;
-    }
+  // & > li {
+  //   a {
+  //     display: block;
+  //     color: #8c8c8c;
+  //     padding: 15px 30px;
+  //     font-family: $MainFamily;
+  //     font-size: 20px;
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     line-height: normal;
+  //     background: #fff;
+  //   }
 
-    a:hover {
-      background: #f0f0f0;
-    }
-  }
+  //   a:hover {
+  //     background: #f0f0f0;
+  //   }
+  // }
 }
 
 .header-menu > ul > li:hover ul {
@@ -10925,4 +10951,8 @@ html.black .blog-page .blog-item .blog-item__filter_black {
 
 .fancybox-active {
   overflow-y: hidden;
+}
+
+.menu-catalog__item {
+  display: flex;
 }
