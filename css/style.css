@@ -8909,6 +8909,7 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0;
+  text-transform: unset;
   margin-bottom: 30px;
 }
 .order-complete__description {
@@ -9027,11 +9028,6 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   transition: all 0.3s ease;
 }
 
-@media (min-width: 1200px) {
-  .answers-item:hover {
-    background: #f3f3f3;
-  }
-}
 .answers-item.active .answers-item__text {
   color: #222;
   font-size: 30px;
