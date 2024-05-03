@@ -525,8 +525,8 @@ $(document).ready(function () {
       totalQuantity += quantity
       totalPrice += price * quantity
     })
-    $('.price-total__number').text(totalPrice)
-    $('.order-detail__price').text(totalPrice)
+    $('.price-total__number').text(totalPrice.toLocaleString('ru-RU'))
+    $('.order-detail__price').text(totalPrice.toLocaleString('ru-RU'))
     $('.order-detail__quantity').text(totalQuantity)
     $('.items-total__value').text(totalQuantity)
   }

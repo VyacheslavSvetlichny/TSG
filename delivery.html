@@ -629,7 +629,15 @@
                   <div class="payment-calculate__description">
                     По индивидуальному расчёту
                   </div>
-                  <a href="#" class="payment-calculate__btn">Оставить заявку</a>
+                  <a
+                    href="#"
+                    class="payment-calculate__btn"
+                    data-src="#feedback-popup"
+                    data-auto-focus="false"
+                    data-fancybox
+                    data-options='{"touch" : false}'
+                    >Оставить заявку</a
+                  >
                   <img src="images/payment-calculate__img.png" alt="" />
                 </div>
               </div>
@@ -882,6 +890,36 @@
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <clipPath id="modal-mask_mobile">
+          <path
+            d="M18.2426 1.75736C19.3679 0.632139 20.894 0 22.4853 0H340V557.515C340 559.106 339.368 560.632 338.243 561.757L321.757 578.243C320.632 579.368 319.106 580 317.515 580H6C2.6863 580 0 577.314 0 574V22.4853C0 20.894 0.632141 19.3679 1.75736 18.2426L18.2426 1.75736Z"
+            fill="white"
+          />
+        </clipPath>
+      </svg>
+      <svg
+        width="0"
+        height="0"
+        preserveaspectratio="none"
+        viewBox="0 0 1200 760"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <clipPath id="modal-mask">
+          <path
+            d="M0 32.4853C0 30.894 0.632141 29.3679 1.75736 28.2426L28.2426 1.75736C29.3679 0.632144 30.894 0 32.4853 0H824C827.314 0 830 2.68629 830 6V398.515C830 400.106 829.368 401.632 828.243 402.757L801.757 429.243C800.632 430.368 799.106 431 797.515 431H5.99999C2.68629 431 0 428.314 0 425V32.4853Z"
+            fill="white"
+          />
+        </clipPath>
+      </svg>
+      <svg
+        width="0"
+        height="0"
+        preserveaspectratio="none"
+        viewBox="0 0 1200 760"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <clipPath id="blog-item__mask">
           <path
             d="M0 64.1422C0 61.49 1.05357 58.9464 2.92893 57.0711L57.0711 2.92893C58.9464 1.05357 61.49 0 64.1421 0H1190C1195.52 0 1200 4.47715 1200 10V725.858C1200 728.51 1198.95 731.054 1197.07 732.929L1172.93 757.071C1171.05 758.946 1168.51 760 1165.86 760H10C4.47715 760 0 755.523 0 750V64.1422Z"
@@ -930,6 +968,39 @@
           />
         </clipPath>
       </svg>
+    </div>
+    <div id="feedback-popup" style="display: none">
+      <form action="#">
+        <div class="feedback-popup__item">
+          <input type="text" placeholder="Имя" />
+        </div>
+        <div class="feedback-popup__item">
+          <input type="tel" placeholder="Телефон" />
+        </div>
+        <div class="feedback-popup__item">
+          <input type="email" placeholder="Почта" />
+        </div>
+        <button type="submit">Оставить заявку</button>
+        <p class="feedback-popup__privacy">
+          Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных
+        </p>
+      </form>
+      <img src="images/modal-background.png" alt="" class="modal-background" />
+      <img
+        src="images/modal-background_mobile.png"
+        alt=""
+        class="modal-background_mobile"
+      />
+      <img
+        src="images/modal-background_white.png"
+        class="modal-background_white"
+        alt=""
+      />
+      <img
+        src="images/modal-background_mobile-white.png"
+        class="modal-background_mobile-white"
+        alt=""
+      />
     </div>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script
