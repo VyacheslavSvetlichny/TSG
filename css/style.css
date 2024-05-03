@@ -9026,10 +9026,12 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.answers-item:hover {
-  background: #f3f3f3;
-}
 
+@media (min-width: 1200px) {
+  .answers-item:hover {
+    background: #f3f3f3;
+  }
+}
 .answers-item.active .answers-item__text {
   color: #222;
   font-size: 30px;

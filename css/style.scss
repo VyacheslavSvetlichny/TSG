@@ -10420,8 +10420,10 @@ html.black .blog-page .blog-item .blog-item__filter_black {
   margin-bottom: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
+}
 
-  &:hover {
+@media (min-width: 1200px) {
+  .answers-item:hover {
     background: #f3f3f3;
   }
 }
