@@ -2088,6 +2088,36 @@ header {
 }
 .container {
 }
+
+.equipment-head {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.equipment-all {
+  padding: 17px 30px;
+  color: #222;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  background: url(../images/svg/eqipment-all.svg);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #ff8c21 !important;
+  }
+}
+
+.black .equipment-all {
+  color: #fff;
+  background: url(../images/svg/eqipment-all__black.svg);
+}
+
 .equipment-heading {
   color: #222;
   font-family: $MainFamily;
@@ -2097,7 +2127,7 @@ header {
   line-height: normal;
   letter-spacing: 5px;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 .equipment-thumbs__container {
   position: relative;
@@ -2418,6 +2448,9 @@ html.black .equipment-next svg path:last-child {
   .equipment-heading {
     font-size: 40px;
     line-height: normal;
+  }
+
+  .equipment-head {
     margin-bottom: 20px;
   }
 
@@ -2567,6 +2600,20 @@ html.black .equipment-next svg path:last-child {
 
   .equipment-sliders {
     margin-right: -20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .equipment-head {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .equipment-all {
+    padding: 13px 24px;
+    font-size: 13px;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
   }
 }
 
