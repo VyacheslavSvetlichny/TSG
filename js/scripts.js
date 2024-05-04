@@ -119,10 +119,18 @@ $(function () {
 $(document).ready(function () {
   $('.header-burger,.mobile-menu__close').click(function (event) {
     $('.header-burger,.mobile-menu').toggleClass('active')
+    $('.burger-shadow').toggleClass('active')
     $('body').toggleClass('lock')
   })
   $('.header-search__mobile').click(function (event) {
     $('.mobile-menu').removeClass('active')
+    $('.burger-shadow').removeClass('active')
+    $('body').removeClass('lock')
+  })
+
+  $('.burger-shadow').click(function () {
+    $('.mobile-menu').removeClass('active')
+    $('.burger-shadow').removeClass('active')
     $('body').removeClass('lock')
   })
 })
@@ -535,6 +543,18 @@ $(document).ready(function () {
 $(function () {
   $('.answers-item').click(function () {
     $(this).children('.answers-item__body').slideToggle()
+    $(this).toggleClass('active')
+  })
+})
+
+$(function () {
+  $('.mobile-menu__content').on('click', '.catalog-menu__btn', function () {
+    $(this).parent().siblings('ul').slideToggle()
+    $(this).parent().toggleClass('active')
+    $(this)
+      .siblings('.catalog-menu__link')
+      .children('.catalog-menu__ico')
+      .toggleClass('active')
     $(this).toggleClass('active')
   })
 })
